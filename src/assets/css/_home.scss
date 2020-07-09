@@ -1,0 +1,75 @@
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background-color: $background-color;
+    margin-top: 2em;
+    .home-content{
+        
+        color: #fff;
+    }
+
+    .today{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       min-height: 50vh;
+
+       .day{
+           font-weight: 900;
+           font-size: 2em;
+
+           h6{
+               font-size: 1.5em;
+               color: $primary-color
+           }
+       }
+       .temp{
+        text-align: left;
+        margin-left: 30%;
+        font-size: 1.2em;
+        font-weight: 700;
+           span{
+               color: $red_color;
+              
+           }
+       }
+       .today-content{
+           display: flex;
+           justify-content: center;
+           div{
+               padding: 0.5em;
+           }
+       }
+    }
+
+    .forecast-container{
+       display: table-cell;
+       width: 100%;
+    
+       .forecast{
+          min-width: 8em;
+          min-height: 50vh;
+          
+
+        .forecast-header{
+           background:   rgba(0, 0, 0, 0.1);
+           margin: 0;
+           padding:0.5em 0;
+          // border: 1px solid;
+           text-align: center;
+          }
+          .forecast-icon{
+              padding: 2em 0;
+          }
+          &:nth-child(odd) {
+            background-color: #262936; }
+    
+          &:nth-child(even) .forecast-header{
+                background-color: #333;
+            }
+       }
+
+       
+    }
+}
