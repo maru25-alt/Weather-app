@@ -27,6 +27,7 @@
 .home .today .day {
   font-weight: 900;
   font-size: 2em;
+  text-align: center;
 }
 
 .home .today .day h6 {
@@ -36,13 +37,13 @@
 
 .home .today .temp {
   text-align: left;
-  margin-left: 30%;
+  margin-left: 40%;
   font-size: 1.2em;
   font-weight: 700;
 }
 
 .home .today .temp span {
-  color: #FA0707;
+  color: #ed6b68;
 }
 
 .home .today .today-content {
@@ -77,6 +78,11 @@
 
 .home .forecast-container .forecast .forecast-icon {
   padding: 2em 0;
+  text-align: center;
+}
+
+.home .forecast-container .forecast .forecast-icon .description {
+  color: #ed6b68;
 }
 
 .home .forecast-container .forecast:nth-child(odd) {
@@ -85,6 +91,10 @@
 
 .home .forecast-container .forecast:nth-child(even) .forecast-header {
   background-color: #333;
+}
+
+.home .forecast-container .forecast .forecast-content {
+  text-align: center;
 }
 
 .map-container {
@@ -117,11 +127,11 @@
 .map-container .country-label {
   color: #fff;
   font-size: 0.5em;
-  fill: #FFB961;
+  fill: #ed6b68;
 }
 
 .map-container .city-circle {
-  fill: #FFB961;
+  fill: #ed6b68;
   stroke: red;
 }
 
@@ -212,5 +222,107 @@
 
 .footer .footer-logo {
   display: block;
+}
+
+.about {
+  background-color: #00001A;
+  height: 80vh;
+  width: 100%;
+  font-size: 16;
+}
+
+.about h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.about h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.about h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.about h5 {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 0.7em;
+}
+
+.about .about_container {
+  margin: 2em;
+  padding: 2em 0;
+}
+
+.about .about_container .about_section {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
+  background-color: #fff;
+  margin-left: 1em;
+  height: 70vh;
+}
+
+.about .about_container .about_section .about_bar {
+  background-color: #0D9BA8;
+  padding: 0.5em;
+  margin: 1em 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about_container .about_form {
+  background-color: #fff;
+  height: 50vh;
+  margin-left: 5em;
+}
+
+.about .about_container .about_form .button {
+  background-color: #0D9BA8;
+  color: #fff;
+}
+
+.about .about_container .about_form .button:hover {
+  opacity: 0.5;
+}
+
+.about .about_container .about_form ul li {
+  list-style: none;
+}
+
+.about .about_container .about_form .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about .about_container .about_form .social-icons li a {
+  color: #0D9BA8;
+  padding-right: 1em;
+}
+
+.about .about_container .about_form .social-icons li a:hover {
+  opacity: 0.5;
+}
+
+.page-container {
+  margin: 5%;
 }
 /*# sourceMappingURL=style.css.map */

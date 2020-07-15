@@ -1,0 +1,5 @@
+export const SET_LOCATION = "SET_LOCATION";
+export const SET_CURRENT_DATA = "SET_CURRENT_DATA";
+export const SET_FORECAST_DATA = "SET_FORECAST_DATA";
+export const GET_MAP = 'GET_MAP';
+export const GET_TABLE_DATA = 'GET_TABLE_DATA';

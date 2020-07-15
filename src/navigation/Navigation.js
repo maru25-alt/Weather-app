@@ -1,8 +1,19 @@
 import React, { Component } from 'react'
 import SearchBar from "./Search.js"
 import logo from '../assets/images/logo.jpg'
+import {connect} from 'react-redux'
+import {getTodayData} from '../store/action/weatherActions'
+import PropTypes from 'prop-types';
+import moment from 'moment'
 export class Navigation extends Component {
+    state={
+        today: moment().format('MMMM Do YYYY'),
+    }
+    componentWillMount(){
+        this.props.getTodayData()
+    }
     render() {
+     console.log(this.props)
         return (
             <div className="navigation">
             <nav className="navbar navbar-expand-lg ">
@@ -25,12 +36,12 @@ export class Navigation extends Component {
                    <a className="nav-link link" href="/about">About</a>
                  </li>
                  <li className="nav-item dropdown">
-                   <a className="nav-link dropdown-toggle link" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <a className="nav-link dropdown-toggle link" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     More
                    </a>
                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a className="dropdown-item link" href="/table">7 Day Weather Forecast</a>
-                     <a className="dropdown-item link" href="/forecast">1 Month Weather Forecast</a>
+                     <a className="dropdown-item link" href="/table">5 Day Weather Forecast</a>
+                     <a className="dropdown-item link" href="/table">1 Month Weather Forecast</a>
                      <a className="dropdown-item link" href="/graph">Weather Graphs</a>
                      
             
@@ -40,11 +51,24 @@ export class Navigation extends Component {
              </div>
              </nav>
            <div className="nav_date">
-             <h3 className="nav_date_location"> city , <span className="date">today</span></h3>
+        <h3 className="nav_date_location"> {this.props.city} , <span className="date">{this.state.today}</span></h3>
            </div>
          </div>   
         )
     }
 }
 
-export default Navigation
+Navigation.propTypes = {
+    city: PropTypes.string.isRequired,
+    getTodayData: PropTypes.func.isRequired
+};
+const mapStateToProps = (state) =>({
+    city: state.WeatherReducer.city
+
+})
+
+const mapActionsToProps = {
+    getTodayData
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(Navigation)

@@ -2,9 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
-} from "react-router-dom";
+  Route} from "react-router-dom";
 import Navigation from './navigation/Navigation'
 import Footer from './navigation/Footer'
 import Home from './views/Home'
@@ -29,14 +27,14 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Router path="*">
-            <Page404/>
-          </Router>
-          <Router  path="table">
+          <Router  path="/table">
             <Table/>
           </Router>
           <Router path="/graph">
             <Graph/>
+          </Router>
+          <Router path="*">
+            <Page404/>
           </Router>
       </Switch>
       <Footer/>

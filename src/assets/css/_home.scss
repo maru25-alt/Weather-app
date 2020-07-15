@@ -18,7 +18,7 @@
        .day{
            font-weight: 900;
            font-size: 2em;
-
+           text-align: center;
            h6{
                font-size: 1.5em;
                color: $primary-color
@@ -26,11 +26,11 @@
        }
        .temp{
         text-align: left;
-        margin-left: 30%;
+        margin-left: 40%;
         font-size: 1.2em;
         font-weight: 700;
            span{
-               color: $red_color;
+               color: $icon_color;
               
            }
        }
@@ -61,12 +61,21 @@
           }
           .forecast-icon{
               padding: 2em 0;
+              text-align: center;
+
+              .description{
+                  color: $icon-color;
+              }
           }
           &:nth-child(odd) {
             background-color: #262936; }
     
           &:nth-child(even) .forecast-header{
                 background-color: #333;
+            }
+
+            .forecast-content{
+                text-align: center;
             }
        }
 
