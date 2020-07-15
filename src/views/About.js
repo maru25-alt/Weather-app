@@ -4,7 +4,7 @@ import Aboutform from '../components/about/AboutForm'
 export class About extends Component {
     render() {
         return (
-        <div className="page-container">
+        <div >
             <div class="about">
                  <div class="about_container">
                     <div class="row " >
