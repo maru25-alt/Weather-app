@@ -14,7 +14,7 @@ export class Weekday extends Component {
               <h6>{moment(data.dt_txt).format('dddd')}</h6>
             </div>
             <div className="forecast-icon">
-                <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}  width="48" />
+                <img alt="icon" src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}  width="48" />
                 <div className='description'>{data.weather[0].description}</div>
             </div>
             <div className="forecast-content">
